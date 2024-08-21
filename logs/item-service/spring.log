@@ -1,0 +1,31 @@
+11:14:39:777  INFO 11480 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.23 on LAPTOP-476JT8H0 with PID 11480 (E:\笔记\Spring\SpringCloud微服务—资料\day03-微服务01\资料\hmall\item-service\target\classes started by Lenovo in E:\笔记\Spring\SpringCloud微服务—资料\day03-微服务01\资料\hmall)
+11:14:39:780 DEBUG 11480 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+11:14:39:781  INFO 11480 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+11:14:40:705  INFO 11480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+11:14:40:706  INFO 11480 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.7] using APR version [1.7.4].
+11:14:40:706  INFO 11480 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+11:14:40:707  INFO 11480 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11:14:40:723  INFO 11480 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+11:14:40:730  INFO 11480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+11:14:40:730  INFO 11480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+11:14:40:864  INFO 11480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+11:14:40:864  INFO 11480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1028 ms
+11:14:41:904  INFO 11480 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+11:14:41:964  INFO 11480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+11:14:41:965  INFO 11480 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+11:14:41:967  INFO 11480 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+11:14:42:010  INFO 11480 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+11:14:42:100  INFO 11480 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 2.75 seconds (JVM running for 3.656)
+11:15:02:403  INFO 11480 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:15:02:404  INFO 11480 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+11:15:02:405  INFO 11480 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+11:15:02:523  INFO 11480 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Starting...
+11:15:02:926  INFO 11480 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Start completed.
+11:15:02:931 DEBUG 11480 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+11:15:02:944 DEBUG 11480 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+11:15:03:157 DEBUG 11480 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+11:15:03:168 DEBUG 11480 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+11:15:03:168 DEBUG 11480 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+11:15:03:219 DEBUG 11480 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+11:27:33:102  INFO 11480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Shutdown initiated...
+11:27:33:112  INFO 11480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Shutdown completed.
