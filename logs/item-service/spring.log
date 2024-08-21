@@ -29,3 +29,50 @@
 11:15:03:219 DEBUG 11480 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
 11:27:33:102  INFO 11480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Shutdown initiated...
 11:27:33:112  INFO 11480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Shutdown completed.
+12:55:09:323  INFO 32312 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.23 on LAPTOP-476JT8H0 with PID 32312 (E:\笔记\Spring\SpringCloud微服务—资料\day03-微服务01\资料\hmall\item-service\target\classes started by Lenovo in E:\笔记\Spring\SpringCloud微服务—资料\day03-微服务01\资料\hmall)
+12:55:09:324 DEBUG 32312 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+12:55:09:325  INFO 32312 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+12:55:10:272  INFO 32312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+12:55:10:273  INFO 32312 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.7] using APR version [1.7.4].
+12:55:10:273  INFO 32312 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+12:55:10:273  INFO 32312 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+12:55:10:292  INFO 32312 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+12:55:10:300  INFO 32312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+12:55:10:300  INFO 32312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+12:55:10:434  INFO 32312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+12:55:10:434  INFO 32312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1069 ms
+12:55:11:564  INFO 32312 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+12:55:11:620  INFO 32312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+12:55:11:621  INFO 32312 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+12:55:11:622  INFO 32312 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+12:55:11:638  INFO 32312 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+12:55:11:731  INFO 32312 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 2.771 seconds (JVM running for 3.898)
+12:56:48:436  INFO 32312 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:56:48:437  INFO 32312 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+12:56:48:438  INFO 32312 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+12:58:16:817  INFO 3816 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.23 on LAPTOP-476JT8H0 with PID 3816 (E:\笔记\Spring\SpringCloud微服务—资料\day03-微服务01\资料\hmall\item-service\target\classes started by Lenovo in E:\笔记\Spring\SpringCloud微服务—资料\day03-微服务01\资料\hmall)
+12:58:16:819 DEBUG 3816 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+12:58:16:820  INFO 3816 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+12:58:17:642  INFO 3816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+12:58:17:642  INFO 3816 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.7] using APR version [1.7.4].
+12:58:17:642  INFO 3816 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+12:58:17:642  INFO 3816 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+12:58:17:646  INFO 3816 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+12:58:17:650  INFO 3816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+12:58:17:650  INFO 3816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+12:58:17:779  INFO 3816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+12:58:17:779  INFO 3816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 929 ms
+12:58:18:764  INFO 3816 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+12:58:18:817  INFO 3816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+12:58:18:817  INFO 3816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+12:58:18:819  INFO 3816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+12:58:18:835  INFO 3816 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+12:58:18:936  INFO 3816 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 2.38 seconds (JVM running for 3.27)
+12:58:30:342  INFO 3816 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:58:30:343  INFO 3816 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+12:58:30:344  INFO 3816 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+12:58:30:406  INFO 3816 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Starting...
+12:58:30:638  INFO 3816 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : hm-item-service-pool - Start completed.
+12:58:30:643 DEBUG 3816 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+12:58:30:660 DEBUG 3816 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+12:58:30:683 DEBUG 3816 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
