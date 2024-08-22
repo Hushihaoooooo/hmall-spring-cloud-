@@ -5,6 +5,7 @@ import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hmall.cart.client.ItemClient;
 import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.dto.ItemDTO;
 import com.hmall.cart.domain.po.Cart;
@@ -43,9 +44,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
-    private final RestTemplate restTemplate;
-
-    private final DiscoveryClient discoveryClient;
+    private final ItemClient itemClient;
 
     //private final IItemService itemService;
 
@@ -91,28 +90,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         // 1.获取商品id TODO 处理商品信息
         Set<Long> itemIds = vos.stream().map(CartVO::getItemId).collect(Collectors.toSet());
         // 2.查询商品
-        //List<ItemDTO> items = itemService.queryItemByIds(itemIds);
-        // 2.1 发现item-service服务的实例列表
-        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
-        if (CollUtils.isEmpty(instances)) {
-            return ;
-        }
-        // 2.2 负载均衡，挑选一个实例
-        ServiceInstance serviceInstance = instances.get(RandomUtil.randomInt(instances.size()));
-
-        // 2.3 发送请求，查询商品
-        ResponseEntity<List<ItemDTO>> response = restTemplate.exchange(
-                serviceInstance.getUri() + "/items?ids={ids}",
-                HttpMethod.GET,
-                null,
-                new ParameterizedTypeReference<List<ItemDTO>>() {
-                },
-                Map.of("ids", CollUtil.join(itemIds, ","))
-        );
-        if (!response.getStatusCode().is2xxSuccessful()) {
-            return ;
-        }
-        List<ItemDTO> items = response.getBody();
+        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
         if (CollUtils.isEmpty(items)) {
             throw new BadRequestException("购物车中商品不存在！");
         }
