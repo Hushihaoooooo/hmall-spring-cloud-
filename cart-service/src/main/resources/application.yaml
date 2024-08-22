@@ -48,3 +48,8 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.hmall.cart.controller
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
