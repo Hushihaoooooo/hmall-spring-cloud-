@@ -5,6 +5,7 @@
       <directory url="file://$PROJECT_DIR$/cart-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/hm-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/user-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/pay-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -12,6 +13,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cart-service" />
+        <module name="pay-service" />
+        <module name="hm-gateway" />
         <module name="trade-service" />
         <module name="hm-common" />
         <module name="item-service" />
@@ -26,8 +29,10 @@
       <module name="cart-service" options="-parameters" />
       <module name="hm-api" options="-parameters" />
       <module name="hm-common" options="-parameters" />
+      <module name="hm-gateway" options="-parameters" />
       <module name="hm-service" options="-parameters" />
       <module name="item-service" options="-parameters" />
+      <module name="pay-service" options="-parameters" />
       <module name="trade-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
