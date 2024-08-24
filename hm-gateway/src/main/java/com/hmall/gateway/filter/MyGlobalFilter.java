@@ -1,4 +1,4 @@
-package com.hmall.gateway.filters;
+package com.hmall.gateway.filter;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -24,6 +24,6 @@ public class MyGlobalFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return 0;
+        return 1;
     }
 }
