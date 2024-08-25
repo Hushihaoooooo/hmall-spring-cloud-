@@ -18,7 +18,7 @@ public class MyGlobalFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
-        System.out.println("执行了自定义的全局过滤器");
+        //System.out.println("执行了自定义的全局过滤器");
         return chain.filter(exchange);
     }
 
