@@ -1,5 +1,6 @@
 package com.hmall.api.client;
 
+import com.hmall.api.client.fallback.ItemClientFallback;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -15,7 +16,7 @@ import java.util.List;
  * @author Shihaohu
  * @date 2024/8/22 14:35
  */
-@FeignClient("item-service")
+@FeignClient(value = "item-service", fallbackFactory = ItemClientFallback.class)
 public interface ItemClient {
     @GetMapping("/items")
     List<ItemDTO> queryItemByIds(@RequestParam("ids") Collection<Long> ids);
