@@ -29,7 +29,6 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements II
         String sqlStatement = "com.hmall.item.mapper.ItemMapper.updateStock";
         boolean r = false;
         try {
-            System.out.println(items);
             r = executeBatch(items, (sqlSession, entity) -> sqlSession.update(sqlStatement, entity));
         } catch (Exception e) {
             throw new BizIllegalException("更新库存异常，可能是库存不足!", e);

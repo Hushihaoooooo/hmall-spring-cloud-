@@ -41,3 +41,6 @@ hm:
       - /search/**
       - /users/login
       - /items/**
+logging:
+  level:
+    com.hmall: debug
