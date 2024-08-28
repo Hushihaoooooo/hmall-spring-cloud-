@@ -34,4 +34,5 @@ public class DefaultFeignConfig {
     public ItemClientFallback itemClientFallback() {
         return new ItemClientFallback();
     }
+
 }
