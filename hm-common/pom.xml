@@ -18,6 +18,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-core</artifactId>
+            <version>1.38.0</version>
+        </dependency>
+<!--        &lt;!&ndash;消息发送&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-amqp</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
         </dependency>
